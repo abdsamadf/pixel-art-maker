@@ -26,13 +26,12 @@ function makeGrid() {
 // Submit and Reset functionality if any children and click on submit then reset the grid otherwise make the grid
 
 $("#sizePicker").on("submit", function (event) {
+    event.preventDefault();
     if ($("#pixelCanvas").children().length > 0) {
-        event.preventDefault();
         $("#pixelCanvas").empty();
         makeGrid();
     }
     else {
-        event.preventDefault();
         makeGrid();
     }
 })
