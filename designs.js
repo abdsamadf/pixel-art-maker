@@ -27,3 +27,15 @@ $("#sizePicker").on("submit", function (event) {
     event.preventDefault()
     makeGrid();
 })
+
+
+function fillColor(squareElement) {
+    let squareColor = $("#colorPicker").val()
+    $(squareElement).css("background-color", squareColor)
+}
+
+// When user clicking on a grid square causes only that square to change color
+
+$("#pixelCanvas").on("click", "td", function (event) {
+    fillColor($(event.currentTarget))
+})
