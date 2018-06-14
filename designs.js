@@ -12,12 +12,12 @@ function makeGrid() {
 
     for (let i = 0; i < tableHeight; i++) {
         //create many elements and set their location once each
-        let tableRow = $("<tr></tr>")
-        $("#pixelCanvas").append(tableRow)
+        let tableRow = $("<tr></tr>");
+        $("#pixelCanvas").append(tableRow);
         for (let j = 0; j < tableWidth; j++) {
             //create many elements and set their location once each
-            let tableColumnData = $("<td></td>")
-            tableRow.append(tableColumnData)
+            let tableColumnData = $("<td></td>");
+            tableRow.append(tableColumnData);
         }
     }
 
@@ -27,24 +27,24 @@ function makeGrid() {
 
 $("#sizePicker").on("submit", function (event) {
     if ($("#pixelCanvas").children().length > 0) {
-        event.preventDefault()
+        event.preventDefault();
         $("#pixelCanvas").empty();
         makeGrid();
-    } 
+    }
     else {
-        event.preventDefault()
+        event.preventDefault();
         makeGrid();
     }
-})   
+})
 
 
 function fillColor(squareElement) {
-    let squareColor = $("#colorPicker").val()
-    $(squareElement).css("background-color", squareColor)
+    let squareColor = $("#colorPicker").val();
+    $(squareElement).css("background-color", squareColor);
 }
 
 // When user clicking on a grid square causes only that square to change color
 
 $("#pixelCanvas").on("click", "td", function (event) {
-    fillColor($(event.currentTarget))
+    fillColor($(event.currentTarget));
 })
