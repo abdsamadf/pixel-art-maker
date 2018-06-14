@@ -30,8 +30,7 @@ $("#sizePicker").on("submit", function (event) {
     if ($("#pixelCanvas").children().length > 0) {
         $("#pixelCanvas").empty();
         makeGrid();
-    }
-    else {
+    } else {
         makeGrid();
     }
 })
