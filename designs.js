@@ -1,10 +1,7 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
+/**
+* @description Make the grid
+*/
 function makeGrid() {
-
     let tableHeight = $("#inputHeight").val();
     let tableWidth = $("#inputWidth").val();
     $("#inputHeight").attr("value", tableHeight);
@@ -20,7 +17,6 @@ function makeGrid() {
             tableRow.append(tableColumnData);
         }
     }
-
 }
 
 // Submit and Reset functionality if any children and click on submit then reset the grid otherwise make the grid
@@ -35,7 +31,10 @@ $("#sizePicker").on("submit", function (event) {
     }
 })
 
-
+/**
+* @description Fill color to grid square element
+* @param {object} squareElement - the current target of square element
+*/
 function fillColor(squareElement) {
     let squareColor = $("#colorPicker").val();
     $(squareElement).css("background-color", squareColor);
