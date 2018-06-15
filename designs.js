@@ -44,13 +44,13 @@ function fillColor(squareElement) {
 
 let changeColor = $("#pixelCanvas").on("click", "td", function (event) {
     fillColor($(event.currentTarget));
-})
+});
 
 // When user double click on a grid squuare causes only that sqaure to clean color
 
 let cleanColor = $("#pixelCanvas").on("dblclick", "td", function () {
     $(this).removeAttr("style");
-})
+});
 
 changeColor();
 cleanColor();
