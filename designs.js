@@ -42,7 +42,7 @@ function fillColor(squareElement) {
 
 // When user clicking on a grid square causes only that square to change color
 
-$("#pixelCanvas").on("click", "td", function (event) {
+let changeColor = $("#pixelCanvas").on("click", "td", function (event) {
     fillColor($(event.currentTarget));
 })
 
@@ -52,4 +52,5 @@ let cleanColor = $("#pixelCanvas").on("dblclick", "td", function () {
     $(this).removeAttr("style");
 })
 
+changeColor();
 cleanColor();
