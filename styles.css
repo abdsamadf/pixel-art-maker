@@ -20,6 +20,7 @@ table,
 tr,
 td {
     border: 1px solid black;
+    cursor: url('https://raw.githubusercontent.com/wesbos/CSS-Cursors/gh-pages/source/santahand.png'), default;
 }
 
 table {
